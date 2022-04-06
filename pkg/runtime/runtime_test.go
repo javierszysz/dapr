@@ -2898,6 +2898,7 @@ func NewTestDaprRuntimeWithProtocol(mode modes.DaprMode, protocol string, appPor
 		DefaultDaprAPIGRPCPort,
 		[]string{DefaultAPIListenAddress},
 		nil,
+		"testhost"
 		appPort,
 		DefaultProfilePort,
 		false,
