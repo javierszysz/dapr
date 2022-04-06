@@ -14,8 +14,8 @@
 name: dapr
 
 on:
-  schedule:
-      - cron: '00 22 * * *'
+  #schedule:
+  #    - cron: '00 22 * * *'
   push:
     branches:
       - master
