@@ -85,9 +85,6 @@ jobs:
             echo >&2
             exit 1
           fi
-      - name: Run make test
-        if: matrix.target_arch == 'amd64'
-        run: make test
       - name: Run make release to build and archive binaries
         run: |
           mkdir -p ${{ env.ARCHIVE_OUTDIR }}
