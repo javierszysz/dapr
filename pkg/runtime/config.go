@@ -56,6 +56,7 @@ type Config struct {
 	EnableProfiling          bool
 	APIGRPCPort              int
 	InternalGRPCPort         int
+	ApplicationHost          string
 	ApplicationPort          int
 	APIListenAddresses       []string
 	ApplicationProtocol      Protocol
@@ -82,7 +83,7 @@ type Config struct {
 func NewRuntimeConfig(
 	id string, placementAddresses []string,
 	controlPlaneAddress, allowedOrigins, globalConfig, componentsPath, appProtocol, mode string,
-	httpPort, internalGRPCPort, apiGRPCPort int, apiListenAddresses []string, publicPort *int, appHost, appPort, profilePort int,
+	httpPort, internalGRPCPort, apiGRPCPort int, apiListenAddresses []string, publicPort *int, appHost string, appPort, profilePort int,
 	enableProfiling bool, maxConcurrency int, mtlsEnabled bool, sentryAddress string, appSSL bool, maxRequestBodySize int, unixDomainSocket string, readBufferSize int, streamRequestBody bool, gracefulShutdownDuration time.Duration, apiLogLevel string) *Config {
 	return &Config{
 		ID:                  id,
